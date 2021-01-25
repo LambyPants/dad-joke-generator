@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Dad Jokes",
+  "description": "Generates a dad joke",
+  "version": "2.0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"],
+  "web_accessible_resources": ["mrTurner.png"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": { "128": "large-icon.png", "48": "icon.png" }
+}
