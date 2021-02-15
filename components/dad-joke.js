@@ -28,6 +28,8 @@ export default class DadJoke {
         width: auto;
         height: auto;
         max-height: 400px;
+        z-index: 99999999999999999999;
+        animation: dad 0.3s ease-in;
       }
       .bubble {
         font-family: sans-serif;
@@ -43,7 +45,9 @@ export default class DadJoke {
         color: #000;
         position: fixed;
         bottom: 355px;
+        z-index: 99999999999999999999;
         left: 100px;
+        animation: setup 1s ease-in;
       }
 
       .bubble:before {
@@ -51,6 +55,7 @@ export default class DadJoke {
         width: 0px;
         height: 0px;
         position: absolute;
+        z-index: 99999999999999999999;
         border-left: 24px solid #fff;
         border-right: 12px solid transparent;
         border-top: 12px solid #fff;
@@ -65,9 +70,47 @@ export default class DadJoke {
       }
       em {
         margin-bottom: 5px;
+        animation: setup 1s ease-in;
       }
       strong {
         margin-top: 5px;
+        animation: punchline 2.5s ease-in;
+      }
+
+      @keyframes setup {
+        0% {
+          opacity: 0;
+        }
+        60% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes punchline {
+        0% {
+          opacity: 0;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes dad {
+        0% {
+          transform: translateX(-100%);
+        }
+        80% {
+          transform: translateX(10px);
+          transform: skew(-5deg, -5deg);
+        }
+        100% {
+          transform: translateX(0);
+          transform: skew(0, 0);
+        }
       }
     `;
   }

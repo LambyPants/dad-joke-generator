@@ -6,15 +6,68 @@
     <script src="./popup.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>Dad Jokes</h1>
+    <h1>Dad Joke Generator</h1>
+    <div class="content">
+      <div class="page container" data-page="home">
+        <button
+          id="about"
+          aria-label="about this project"
+          class="item"
+          data-page="about"
+        >
+          About this project
+        </button>
+        <button
+          id="settings"
+          aria-label="edit your settings"
+          class="item"
+          data-page="settings"
+        >
+          Settings
+        </button>
+        <button aria-label="get a dad joke now" class="item" id="dadJoke">
+          Get a dad joke
+        </button>
       </div>
-      <p id="setup" class="starter">Heya sport, how's it hanging?</p>
-      <p id="punchline" class="starter"></p>
-      <div class="buttons">
-        <button id="dadJoke">Tell Me a Dad Joke</button>
+      <div class="container secondary">
+        <button id="backButton" hidden class="back-button" data-page="home">
+          Go back
+        </button>
+        <div hidden class="page" data-page="about">
+          <p>About the project will go here</p>
+        </div>
+        <div class="page" data-page="settings">
+          <div>
+            <label for="frequency">Random joke frequency</label>
+            <select name="frequency" id="frequency">
+              <option value="never">Never</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="veryHigh">Very High</option>
+            </select>
+          </div>
+          <div>
+            <label for="character">Character</label>
+            <select name="character" id="character">
+              <option value="mrTurner">Mr. Turner</option>
+            </select>
+          </div>
+        </div>
       </div>
+
+      <footer>
+        <a
+          target="_blank"
+          href="https://github.com/LambyPants/google-meet-randomizer"
+          >Code</a
+        >
+        <a
+          target="_blank"
+          href="https://github.com/LambyPants/google-meet-randomizer"
+          >Contact</a
+        >
+      </footer>
     </div>
   </body>
 </html>
