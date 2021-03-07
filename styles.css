@@ -51,12 +51,17 @@ button.item {
 }
 
 .secondary {
-  font-size: 13px;
+  font-size: 15px;
   background-color: #fff;
   padding: 0 20px;
 }
 
 .secondary select {
+  display: block;
+}
+
+.secondary label {
+  padding: 10px 0;
   display: block;
 }
 

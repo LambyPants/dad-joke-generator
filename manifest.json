@@ -7,7 +7,7 @@
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage", "alarms"],
   "web_accessible_resources": ["mrTurner.png"],
   "content_scripts": [
     {

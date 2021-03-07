@@ -15,6 +15,8 @@ export default class DadJoke {
       :host {
         opacity: 1;
         transition: opacity 0.5s ease;
+        cursor: pointer;
+        display: block;
       }
 
       :host([fade]) {
@@ -125,6 +127,15 @@ export default class DadJoke {
     shadow.appendChild(style);
     this.drawUI(shadow);
     document.body.appendChild(this.widget);
+    this.widget.addEventListener('click', () => {
+      console.log('daddo click');
+      this.widget.dispatchEvent(
+        new CustomEvent('dad-joke-click', {
+          bubbles: true,
+          composed: true,
+        }),
+      );
+    });
     return this.widget;
   }
 

@@ -36,21 +36,25 @@
         <div hidden class="page" data-page="about">
           <p>About the project will go here</p>
         </div>
-        <div class="page" data-page="settings">
+        <div hidden class="page" data-page="settings">
           <div>
-            <label for="frequency">Random joke frequency</label>
+            <label for="frequency">Surprise me with a joke</label>
             <select name="frequency" id="frequency">
               <option value="never">Never</option>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-              <option value="veryHigh">Very High</option>
+              <option value="low">1-2 times per day</option>
+              <option value="medium">Every few hours</option>
+              <option value="high">1 time every hour</option>
+              <option value="veryHigh">Multiple times an hour</option>
             </select>
           </div>
           <div>
-            <label for="character">Character</label>
-            <select name="character" id="character">
-              <option value="mrTurner">Mr. Turner</option>
+            <label for="timeout">Make joke disappear</label>
+            <select name="timeout" id="timeout">
+              <option value="3">After 3 seconds</option>
+              <option value="5">After 5 seconds</option>
+              <option value="10">After 10 seconds</option>
+              <option value="15">After 15 seconds</option>
+              <option value="30">After 30 seconds</option>
             </select>
           </div>
         </div>

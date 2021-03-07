@@ -4,17 +4,24 @@ let KneeSlapper;
 let timeout;
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  const { action, setup, punchline } = request;
+  const { action, setup, punchline, userTimeout, source } = request;
+  console.log('timeout: ', userTimeout);
   if (action === 'tellJoke') {
     // async because we are using a setTimeout
     (async () => {
-      ensureReady();
+      if (
+        KneeSlapper &&
+        KneeSlapper.widget.getAttribute('fade') === null &&
+        source === 'background'
+      ) {
+        return;
+      }
+      ensureReady(source);
       KneeSlapper = new DadJoke(setup, punchline);
       KneeSlapper.init();
       timeout = setTimeout(() => {
         KneeSlapper.fadeAway();
-        sendResponse('Joke is all done! Ready for a new one!');
-      }, 6000);
+      }, Number(userTimeout) * 1000 + 2000);
     })();
     // keep the messaging channel open for sendResponse
     return true;
@@ -29,3 +36,7 @@ function ensureReady() {
     clearTimeout(timeout);
   }
 }
+
+window.addEventListener('dad-joke-click', () => {
+  ensureReady();
+});
