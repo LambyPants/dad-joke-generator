@@ -11,7 +11,6 @@ let cachedPunchline = '';
 let notificationAlarm;
 
 const createAlarm = (period) => {
-  console.log('period: ', period);
   notificationAlarm = chrome.alarms.create('myAlarm', {
     delayInMinutes: period,
   });
@@ -25,7 +24,7 @@ const setAlarm = ({ frequency }) => {
   chrome.alarms.clearAll();
   switch (frequency) {
     case 'veryHigh':
-      createAlarm(randomNum(1, 1));
+      createAlarm(randomNum(1, 10));
       break;
     case 'high':
       createAlarm(randomNum(70, 45));
@@ -40,7 +39,6 @@ const setAlarm = ({ frequency }) => {
 };
 
 chrome.alarms.onAlarm.addListener(function(alarm) {
-  console.log('alarm: ', alarm);
   chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
     if (tabs && tabs[0] && tabs[0].id) {
       tellDadJoke('background', () => {});
@@ -59,7 +57,6 @@ const getUserData = (cb) => {
       chrome.storage.sync.set({ user: NEW_USER });
     }
     cachedUser = foundUser;
-    console.log('user: ', cachedUser);
     if (!cachedPunchline || !cachedSetup) {
       await getJoke();
     }
@@ -87,7 +84,6 @@ const getJoke = async () => {
     'https://official-joke-api.appspot.com/random_joke',
   );
   const { setup, punchline } = await setupJoke.json();
-  console.log('setup: ', setup);
   cachedSetup = setup;
   cachedPunchline = punchline;
 };
@@ -112,7 +108,6 @@ const tellDadJoke = (source, sendResponse) => {
 };
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log('message: ', message);
   if (message.type === 'getUser') {
     getUserData(sendResponse);
   }

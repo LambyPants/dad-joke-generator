@@ -5,7 +5,6 @@ let timeout;
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   const { action, setup, punchline, userTimeout, source } = request;
-  console.log('timeout: ', userTimeout);
   if (action === 'tellJoke') {
     // async because we are using a setTimeout
     (async () => {

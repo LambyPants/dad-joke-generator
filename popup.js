@@ -13,7 +13,6 @@ document.addEventListener(
   () => {
     // this is the button we click to get a new joke
     chrome.runtime.sendMessage({ type: 'getUser' }, (user) => {
-      console.log('pages: ', user);
       cachedUser = user;
       dadJokeButton = document.getElementById('dadJoke');
       settingsButton = document.getElementById('settings');
@@ -35,7 +34,6 @@ document.addEventListener(
           { type: 'setFrequency', value: e.target.value },
           (updatedUser) => {
             cachedUser = updatedUser;
-            console.log('done', updatedUser);
           },
         );
       });
@@ -58,9 +56,7 @@ document.addEventListener(
 );
 
 function handleOptionClick({ currentTarget }) {
-  console.log('currentTarget: ', currentTarget);
   const currentPage = currentTarget.getAttribute('data-page');
-  console.log('currentPage: ', currentPage);
   document.querySelectorAll('.page').forEach((item) => {
     const itemPage = item.getAttribute('data-page');
     if (itemPage === currentPage) {

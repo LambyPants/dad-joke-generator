@@ -128,7 +128,6 @@ export default class DadJoke {
     this.drawUI(shadow);
     document.body.appendChild(this.widget);
     this.widget.addEventListener('click', () => {
-      console.log('daddo click');
       this.widget.dispatchEvent(
         new CustomEvent('dad-joke-click', {
           bubbles: true,
