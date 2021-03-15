@@ -11,6 +11,7 @@
       <div class="page container" data-page="home">
         <button
           id="about"
+          title="About this project"
           aria-label="about this project"
           class="item"
           data-page="about"
@@ -19,13 +20,19 @@
         </button>
         <button
           id="settings"
+          title="Edit your settings"
           aria-label="edit your settings"
           class="item"
           data-page="settings"
         >
           Settings
         </button>
-        <button aria-label="get a dad joke now" class="item" id="dadJoke">
+        <button
+          aria-label="get a dad joke now"
+          class="item"
+          id="dadJoke"
+          title="Get a dad joke"
+        >
           Get a dad joke
         </button>
       </div>
@@ -35,6 +42,8 @@
             id="backButton"
             hidden
             class="back-button"
+            aria-label="Go back"
+            title="Go back"
             data-page="home"
             href="#"
           >
@@ -54,7 +63,10 @@
           <p>
             If this project brightens your day, consider making a donation to
             the
-            <a href="https://www.chicagosfoodbank.org/financial-support/"
+            <a
+              aria-label="Donate to the Chicago Food Bank"
+              title="Donate to the Chicago Food Bank"
+              href="https://www.chicagosfoodbank.org/financial-support/"
               >Chicago Food Bank</a
             >
           </p>
@@ -62,7 +74,7 @@
         <div hidden class="page" data-page="settings">
           <div>
             <label for="frequency">Surprise me with a joke</label>
-            <select name="frequency" id="frequency">
+            <select name="frequency" id="frequency" aria-label="Joke frequency">
               <option value="never">Never</option>
               <option value="low">1-2 times per day</option>
               <option value="medium">Every few hours</option>
@@ -72,7 +84,11 @@
           </div>
           <div>
             <label for="timeout">Make joke disappear</label>
-            <select name="timeout" id="timeout">
+            <select
+              name="timeout"
+              id="timeout"
+              aria-label="Make joke disappear after X seconds"
+            >
               <option value="3">After 3 seconds</option>
               <option value="5">After 5 seconds</option>
               <option value="10">After 10 seconds</option>

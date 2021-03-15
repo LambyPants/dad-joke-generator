@@ -1,21 +1,22 @@
-# Dad Jokes
+# Dad Joke Genereator
 
 [Download the extension](https://chrome.google.com/webstore/detail/dad-jokes/lamfcglihfmokpfelfkepmhlggnkeppn?hl=en&authuser=2)
 
 ![Demo of Dad Jokes](http://g.recordit.co/F7eFUqvBv8.gif)
 
-A simple Chrome extension which generates a randomized list of participants on a Google Meet call. I built this to make our large group meetings easier, as it's often difficult to determine who has already given their update or who should be next. This extension can also be used to take attendance or randomly select participants.
+This is a "just for fun" Chrome extension which gets a random dad joke at a customizable time interval. Want to hear a corny dad joke a few times a day? This extension is for you.
 
-It includes 3 commands:
+If this project brightens your day, consider making a donation to
+the [Chicago Food Bank](https://www.chicagosfoodbank.org/financial-support/")
 
-- Copy (copies the list of names to the clipboard)
-- Randomize (generates a randomly sorted list of names)
-- Resync (keeps the list order the same, but adds / removes guests who have joined or left)
+## Tutorial
 
-## Disclaimer
+Interested in learning how to build your own Chrome extension or how this one was made? It's on my wishlist to provide a tutorial. Star this repo to get automatically updated / give me extra motivation to finish it up.
 
-Google does not offer an API for Google Meet, so this extension makes many assumptions about the Google Meet UI. It will probably break when Google updates their interface. Open a PR or create an issue should you experience any issues.
+## Special Thanks
 
-## Contributing
+This project was made using the very awesome, much appreciated [Icanhazdadjoke API](https://icanhazdadjoke.com/)
 
-You are welcome to contribute to this project and I encourage you to open a PR if you have any ideas / improvements.
+## Contact
+
+Feel free to contact me at appsbylamby@gmail.com

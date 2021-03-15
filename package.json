@@ -1,15 +1,16 @@
 {
-  "name": "dad-jokes",
-  "version": "2.0.1",
-  "description": "Randomly sorts Google Meet participants into a list which can be easily copied to your clipboard",
+  "name": "dad-joke-generator",
+  "version": "1.0.0",
+  "description": "Brighten your day with a random dad joke told to you at a customizable frequency.",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "minify": "html-minifier --input-dir ./dist --output-dir ./dist --collapse-whitespace --file-ext $EXT",
     "build": "rollup -c && EXT=css npm run minify && EXT=html npm run minify",
     "watch": "rollup -c -w",
-    "test": "echo \"Tests coming soon\" && exit 1"
+    "test": "echo \"Tests coming when open source projects are paid\" && exit 1"
   },
-  "author": "",
+  "author": "Lamby",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.0.0",

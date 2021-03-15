@@ -80,4 +80,5 @@ async function handleDadJokeClick() {
     dadJokeButton.removeAttribute('disabled');
     // query tabs and grab the active one
   });
+  window.close();
 }
