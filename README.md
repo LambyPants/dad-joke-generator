@@ -7,7 +7,7 @@
 This is a "just for fun" open source Chrome extension which gets a random dad joke at a customizable time interval. Want to hear a corny dad joke a few times a day? This extension is for you.
 
 If this project brightens your day, consider making a donation to
-the [Chicago Food Bank](https://www.chicagosfoodbank.org/financial-support/")
+the [Chicago Food Bank](https://www.chicagosfoodbank.org/financial-support/"), an organization + mission of which I am very supportive.
 
 ## Tutorial
 
