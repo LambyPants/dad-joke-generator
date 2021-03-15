@@ -1,6 +1,6 @@
 # Dad Joke Genereator
 
-[Download the extension](https://chrome.google.com/webstore/detail/dad-joke-generator/lamfcglihfmokpfelfkepmhlggnkeppn?hl=en&authuser=2)
+[Download the extension](https://chrome.google.com/webstore/detail/dad-joke-generator/omlkegalphjkgijmcjlcgfchcmhiblbj?hl=en&authuser=2)
 
 ![Demo of Dad Jokes](http://g.recordit.co/OKgR9ameKs.gif)
 
