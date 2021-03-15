@@ -3,6 +3,7 @@
 [Download the extension](https://chrome.google.com/webstore/detail/dad-joke-generator/omlkegalphjkgijmcjlcgfchcmhiblbj?hl=en&authuser=2)
 
 ![Demo of Dad Jokes](http://g.recordit.co/OKgR9ameKs.gif)
+![High quality demo of Dad Jokes](https://github.com/LambyPants/dad-joke-generator/blob/main/demo/dadjokedemo.mov)
 
 This is a "just for fun" open source Chrome extension which gets a random dad joke at a customizable time interval. Want to hear a corny dad joke a few times a day? This extension is for you.
 
