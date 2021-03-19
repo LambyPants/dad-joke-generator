@@ -1,6 +1,6 @@
 {
   "name": "dad-joke-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Brighten your day with a random dad joke told to you at a customizable frequency.",
   "main": "index.js",
   "private": true,

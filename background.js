@@ -24,15 +24,15 @@ const setAlarm = ({ frequency }) => {
   chrome.alarms.clearAll();
   switch (frequency) {
     case 'veryHigh':
-      createAlarm(randomNum(1, 10));
+      createAlarm(randomNum(1, 5));
       break;
     case 'high':
-      createAlarm(randomNum(70, 45));
+      createAlarm(randomNum(10, 30));
     case 'medium':
-      createAlarm(randomNum(180, 60));
+      createAlarm(randomNum(40, 70));
       break;
     case 'low':
-      createAlarm(randomNum(360, 120));
+      createAlarm(randomNum(60, 120));
       break;
     default:
   }

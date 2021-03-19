@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Dad Joke Generator",
   "description": "Brighten your day with a random dad joke told to you at a customizable frequency.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
